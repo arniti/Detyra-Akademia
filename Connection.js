@@ -43,17 +43,20 @@ const Sales = bookshelf.model('Sales', {
 app.get("/", async (req, res) => {
     res.send("1) Type /TechShop/Users/(a specific id), 2) Type /number for the total purchase, 3) Type /average for the average price");
 });
-app.get("/TechShop/users", async (req, res) => {
-    var users = await new User().fetchAll();
-    res.json(users);
-});
-app.get("/TechShop/prod", async (req, res) => {
-    var prod = await new Products().fetchAll();
-res.json(prod);
-});
-app.get("/TechShop/sales", async (req, res) => {
-    var sales = await new Sales().fetchAll();
-res.json(sales);
+app.get("/TechShop/:para/", async (req, res) => {
+    if([req.params.para].toString() === "users") {
+        var users = await new User().fetchAll();
+        res.json(users);
+    }
+    else if([req.params.para].toString() === "prod") {
+        var prod = await new Products().fetchAll();
+        res.json(prod);
+    } else if([req.params.para].toString() === "sales") {
+        var sales = await new Sales().fetchAll();
+        res.json(sales);
+    } else {
+        res.json("Type users for users, prod for products or sale for sales");
+    }
 });
 
 app.get("/TechShop/users/:id", async (req, res) => {
