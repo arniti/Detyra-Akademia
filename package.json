@@ -1,0 +1,20 @@
+{
+  "name": "detyra",
+  "version": "1.0.0",
+  "description": "Detyra nga Akademia, lidhja e mysql duke perdor nodejs dhe zhvillimi i disa API ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Arnit Gashi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bookshelf": "^1.1.1",
+    "express": "^4.17.1",
+    "i": "^0.3.6",
+    "knex": "^0.21.1",
+    "mysql": "^2.18.1"
+  }
+}
