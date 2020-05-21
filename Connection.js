@@ -41,7 +41,7 @@ const Sales = bookshelf.model('Sales', {
     }
 });
 app.get("/", async (req, res) => {
-    res.send("1) Type /TechShop/Users/(a specific id), 2) Type /number for the total purchase, 3) Type /average for the average price");
+    res.send("1) Type /TechShop/users/(a specific id), 2) Type /number for the total purchase, 3) Type /average for the average price");
 });
 app.get("/TechShop/:para/", async (req, res) => {
     if([req.params.para].toString() === "users") {
