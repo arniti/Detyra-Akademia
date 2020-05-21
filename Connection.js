@@ -47,8 +47,7 @@ app.get("/TechShop/:para/", async (req, res) => {
     if([req.params.para].toString() === "users") {
         var users = await new User().fetchAll();
         res.json(users);
-    }
-    else if([req.params.para].toString() === "prod") {
+    } else if([req.params.para].toString() === "prod") {
         var prod = await new Products().fetchAll();
         res.json(prod);
     } else if([req.params.para].toString() === "sales") {
