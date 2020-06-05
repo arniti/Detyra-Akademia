@@ -23,13 +23,13 @@ const bookshelf = require('bookshelf')(knex);
 
 // Defining models
 const User = bookshelf.model('User', {
-    tableName: 'Users',
+    tableName: 'Users'
 });
 const Products = bookshelf.model('Products', {
-    tableName: 'Products',
+    tableName: 'Products'
 });
 const Sales = bookshelf.model('Sales', {
-    tableName: 'Sales',
+    tableName: 'Sales'
 });
 
 app.get("/", async (req, res) => {
