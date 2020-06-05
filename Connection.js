@@ -24,22 +24,14 @@ const bookshelf = require('bookshelf')(knex);
 // Defining models
 const User = bookshelf.model('User', {
     tableName: 'Users',
-    posts() {
-        return this.hasMany(Posts)
-    }
 });
 const Products = bookshelf.model('Products', {
     tableName: 'Products',
-    posts() {
-        return this.hasMany(Posts)
-    }
 });
 const Sales = bookshelf.model('Sales', {
     tableName: 'Sales',
-    posts() {
-        return this.hasMany(Posts)
-    }
 });
+
 app.get("/", async (req, res) => {
     res.send("1) Type /TechShop/users/(a specific id), 2) Type /number for the total purchase, 3) Type /average for the average price");
 });
