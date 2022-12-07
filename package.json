@@ -10,9 +10,9 @@
   "author": "Arnit Gashi",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "bookshelf": "^1.1.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "i": "^0.3.6",
     "knex": "^0.21.1",
     "mysql": "^2.18.1"
